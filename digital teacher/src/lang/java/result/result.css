@@ -1,0 +1,55 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+ .header {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #007bff ;
+     height: 70px;
+     width: 100%;
+     font-family: Trebuchet MS;
+     font-size: 30px;
+     font-weight: 900;
+     color: #fff;
+ }
+ .section{
+    line-height: 70px;
+    margin-left: 70px;
+    margin-right: 70px;
+    font-family: trebuchet MS;
+    font-size:1.5rem;
+    text-align: center;
+ }
+.container {
+    background-color: rgb(216, 216, 216)
+}
+h1{
+    font-size:2rem;
+}
+input,.submit{
+    border: 2px solid black;
+    height: 40px;
+    width: 300px;
+    font-family: Trebuchet MS;
+    font-size: larger;
+    text-align: center;
+}
+#basicbar{
+    width: 10%;
+}
+a{
+    text-decoration: none;
+}
+a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+

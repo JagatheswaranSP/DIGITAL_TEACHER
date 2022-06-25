@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="validation.css">
+</head>
+<body>
+    <h1>VALIDATION PAGE</h1>
+    <div id="container">
+        <div>
+            <label><br><br>PLEASE ENTER THE VALID CODE HERE</label><br><br><br>
+            <input id="KeyInput" placeholder="Enter the code key here"> <br><br>
+            <button onclick="validateKey()">SUBMIT</button>
+        </div>
+    </div><br><br>
+<p id="message"></p>
+<script type="text/javascript">
+    var UserEnteredKey = document.getElementById('KeyInput'); 
+    var PassKey = ["INTvblZ", "INTEo3z", "INTPtnu", "INTHppZ", "INTOGlP", "INT1ds3", "INT63BB", "INTvq9b", "INT4aHZ", "INTqznl", "INToSvf", "INTLU1W", "INT5XHm", "INTCZLN", "INTxcqV", "INTlJus", "INTMNmH", "INTfX0U", "INTKal6", "INTgKXe", "INTpV8u", "INTQxgL", "INTBTNd", "INToUw6", "INTnEVz", "INTqqoQ", "INTefQD", "INTdJDY", "INTNhf2", "INTrOFn", "INTzY3A", "INTV3g0", "INTiU0b", "INTcemy", "INTF1PS", "INT5X7C", "INTFtUH", "INTIWs8", "INTNvrK", "INTKReq", "INTzTbC", "INTMfe7", "INTuk7q", "INThWp8", "INTXX9r", "INTKCEI", "INTATei", "INTiu73", "INTYJ6K", "INTmDWm",
+                    "INA2w3R", "INAe8gc", "INA8506", "INAwh5u", "INA8gqV", "INAjnfh", "INAspU9", "INAMzQu", "INAEzZY", "INAuKtr", "INAfQuR", "INAHr0K", "INAeQhX", "INANepR", "INAxNgu", "INAkAtU", "INAdiBF", "INAPyx0", "INARgEx", "INA78qO", "INAlxLN", "INA39dU", "INAJDvX", "INACrnb", "INAcVjl", "INAdYiN", "INAJng6", "INAwqtE", "INAkYOu", "INAykjr", "INAKxDt", "INAPrRc", "INAxvGD", "INAPCNj", "INAkshu", "INAPobG", "INARrIW", "INAEFml", "INAYnEi", "INA2ZR4", "INAV8sX", "INA3KEi", "INAWGoy", "INAWPEJ", "INA0bP3", "INAwjVL", "INAjW37", "INAhKLC", "INAbufq", "INA6g4N","developer"];
+    var FailKey = ["INFc7GY", "INFwORk", "INFKgQ8", "INFYCv4", "INFibTS", "INFqIP3", "INFiETZ", "INFo46d", "INFk0sJ", "INFvkKk", "INFT99R", "INFI7Cr", "INFmBIT", "INF1nUX", "INFCn7j", "INFZDNY", "INFf68L", "INFN2Ya", "INF93NF", "INFBb8g", "INF44FU", "INFaZS5", "INFiVlh", "INFO3nx", "INFhpdo", "INFiiTJ", "INFP1Jo", "INFBC9Z", "INFjMeM", "INFvmfG", "INFnHRf", "INFaNx9", "INFtQJb", "INFafSP", "INFmVer", "INFmsNM", "INFcGg2", "INFJmgE", "INFxqIB", "INFu93R", "INFG8HJ", "INFX9wE", "INFh54E", "INFlVpH", "INFDXVW", "INFid8c", "INFJWJS", "INFiLlr", "INFm5cF", "INFcJiq"]
+    function validateKey() {
+        var PassKeySearch = PassKey.indexOf(UserEnteredKey.value);
+        var FailKeySearch = FailKey.indexOf(UserEnteredKey.value);
+        console.log(PassKeySearch)
+        if (UserEnteredKey.value == PassKey[PassKeySearch]) {
+            console.log("Validated key")
+            document.body.style.backgroundColor = 'green';
+            document.getElementById('message').innerHTML ="Your code is valid <a href='assignmentpg1.html'>Click here to continue</a>";
+        } else if(UserEnteredKey.value == FailKey[FailKeySearch]) {
+            console.log("valid key but Fail")
+            document.body.style.backgroundColor = 'darkorange';
+            document.getElementById('message').innerHTML ="You Failed in Intermediate Quiz, Try Again after you got good score";
+        } else {
+            console.log("Invalid key")
+            document.body.style.backgroundColor = 'red';
+            document.getElementById('message').innerHTML ="Your code is invalid ";
+        }
+    } 
+</script>
+</body>
+</html>

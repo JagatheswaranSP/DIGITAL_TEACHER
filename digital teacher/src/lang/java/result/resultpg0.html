@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="validation.css">
+</head>
+<body>
+    <h1>VALIDATION PAGE</h1>
+    <div id="container">
+        <div>
+            <label><br><br>PLEASE ENTER THE VALID CODE HERE</label><br><br><br>
+            <input id="KeyInput" placeholder="Enter the code key here"> <br><br>
+            <button onclick="validateKey()">SUBMIT</button>
+        </div>
+    </div><br><br>
+<p id="message"></p>
+<script type="text/javascript">
+    var UserEnteredKey = document.getElementById('KeyInput'); 
+    var PassKey = ["EXTqvi7", "EXT59JM", "EXTtUqF", "EXTa4W6", "EXT8Jj8", "EXT39BB", "EXTB3i5", "EXTxGt7", "EXTfFPt", "EXTcqYt", "EXT8zNw", "EXThjMo", "EXTrFSw", "EXTrzVB", "EXTq2Ok", "EXTR9lW", "EXTbgqK", "EXTEHmq", "EXTlxoe", "EXTHEp5", "EXTJwyk", "EXTL0N3", "EXTgEhH", "EXTkSaN", "EXTMiz7", "EXTRQ4h", "EXT6AKa", "EXTeYIJ", "EXToNyR", "EXTykk8", "EXTPW5x", "EXTa5qg", "EXTS2Cj", "EXTR4d9", "EXTumW7", "EXTeDmj", "EXTCmJh", "EXTxQOc", "EXTQcNN", "EXTnjBN", "EXTCgrr", "EXTGlgM", "EXTAke0", "EXTA3DW", "EXTiP04", "EXTSYiU", "EXTgqmq", "EXTraB7", "EXTEQMP", "EXTCb7x",
+                    "EXA5CB4", "EXARtvY", "EXAkdyn", "EXAW45X", "EXAzwKK", "EXAepR0", "EXAFpdE", "EXAqrS9", "EXAGK9w", "EXApAHl", "EXA6BdR", "EXAZfJo", "EXABA4O", "EXALKxL", "EXAxVmO", "EXAxket", "EXAmhgI", "EXAzrnh", "EXA0ftl", "EXAxIsC", "EXACT6D", "EXALfGd", "EXA3bFC", "EXAAqKw", "EXA2Uvk", "EXArRTr", "EXAp2Dp", "EXAU7OJ", "EXAxDFh", "EXAF0bY", "EXAcfij", "EXAV7fo", "EXAsnGF", "EXAvgrl", "EXA7OaN", "EXAO3aA", "EXABkgK", "EXAlStJ", "EXAygKN", "EXAKpYx", "EXAPLsl", "EXATQ8a", "EXAQVor", "EXAJnq6", "EXAR9y3", "EXAzN1B", "EXAqZbV", "EXAnxhJ", "EXAJqM6", "EXARmzq","developer"];
+    var FailKey = ["EXFehbQ", "EXFcorf", "EXFk13H", "EXFvQuA", "EXFbps8", "EXFfJkk", "EXFJ7lJ", "EXFBITN", "EXFJ369", "EXFo9kQ", "EXFLbrx", "EXFufjl", "EXFqRi1", "EXFvmEY", "EXFEV4l", "EXFTeRU", "EXFT1aG", "EXFISiC", "EXFhXsB", "EXFJkBe", "EXFZLRz", "EXFnYZq", "EXF2DiS", "EXFP1Cz", "EXFlpzY", "EXFEj0M", "EXFyZBh", "EXFtOcV", "EXFj0W5", "EXFVCHI", "EXF5wRZ", "EXFNtc6", "EXFAZFy", "EXFsUfX", "EXFOXZP", "EXFUZeP", "EXFPcQI", "EXFtHhs", "EXFftg7", "EXFoqcd", "EXFEfZV", "EXF5mj8", "EXFARfa", "EXFZmx2", "EXFIrJK", "EXFrVaQ", "EXF6eBe", "EXFenXX", "EXFwdV3", "EXF6WVb"];
+    function validateKey() {
+        var PassKeySearch = PassKey.indexOf(UserEnteredKey.value);
+        var FailKeySearch = FailKey.indexOf(UserEnteredKey.value);
+        console.log(PassKeySearch)
+        if (UserEnteredKey.value == PassKey[PassKeySearch]) {
+            console.log("Validated key")
+            document.body.style.backgroundColor = 'green';
+            document.getElementById('message').innerHTML ="Your code is valid <a href='resultpg1.html'>Click here to continue</a>";
+        } else if(UserEnteredKey.value == FailKey[FailKeySearch]) {
+            console.log("valid key but Fail")
+            document.body.style.backgroundColor = 'darkorange';
+            document.getElementById('message').innerHTML ="You Failed in Assignment Try Again after you got good score";
+        } else {
+            console.log("Invalid key")
+            document.body.style.backgroundColor = 'red';
+            document.getElementById('message').innerHTML ="Your code is invalid ";
+        }
+    } 
+</script>
+</body>
+</html>

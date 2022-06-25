@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic</title>
+    <link rel="stylesheet" href="styleforpages.css">
+</head>
+<body>
+    <header>Java Break and Continue</header>
+    <section>
+        <p>
+            <h3>Java Break</h3>
+            You have already seen the break statement used in an earlier chapter of this tutorial. It was used to "jump out" of a switch statement.
+
+            The break statement can also be used to jump out of a loop.
+
+            This example stops the loop when i is equal to 4:
+            <br>
+Example<pre>
+for (int i = 0; i < 10; i++) {
+  if (i == 4) {
+    break;
+  }
+  System.out.println(i);
+}</pre>
+        <h3>Java Continue</h3>
+        The continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.
+        <br>
+        This example skips the value of 4:
+        <br>
+        Example<pre>
+        for (int i = 0; i < 10; i++) {
+          if (i == 4) {
+            continue;
+          }
+          System.out.println(i);
+        }</pre>
+         
+        
+        <h3>Break and Continue in While Loop</h3>
+        You can also use break and continue in while loops:
+        
+        Break Example<pre>
+        int i = 0;
+        while (i < 10) {
+          System.out.println(i);
+          i++;
+          if (i == 4) {
+            break;
+          }
+        }
+        </pre>
+        
+        Continue Example<pre>
+        int i = 0;
+        while (i < 10) {
+          if (i == 4) {
+            i++;
+            continue;
+          }
+          System.out.println(i);
+          i++;
+        }</pre></p>
+    </section><footer>
+    <button id="previous" onclick="window.location.href='basicpg14.html'">Previous</button>
+    <button id="next" onclick="window.location.href='basicpg16.html'">Next</button></footer>
+</body>
+</html>

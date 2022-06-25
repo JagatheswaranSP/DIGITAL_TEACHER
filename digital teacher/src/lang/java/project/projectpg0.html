@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="validation.css">
+</head>
+<body>
+    <h1>VALIDATION PAGE</h1>
+    <div id="container">
+        <div>
+            <label><br><br>PLEASE ENTER THE VALID CODE HERE</label><br><br><br>
+            <input id="KeyInput" placeholder="Enter the code key here"> <br><br>
+            <button onclick="validateKey()">SUBMIT</button>
+        </div>
+    </div><br><br>
+<p id="message"></p>
+<script type="text/javascript">
+    var UserEnteredKey = document.getElementById('KeyInput'); 
+    var PassKey = ["ASTmhbf", "ASTqIT2", "ASTccXf", "AST13Pf", "ASTeWlk", "ASTHQPu", "ASTXN9B", "ASTZoFr", "ASTaVb7", "ASTMhqQ", "ASTcEjr", "ASTFpsG", "ASTQOJz", "ASTJIHg", "ASTUXyT", "ASTEmJk", "ASTU3bW", "ASTF8kf", "ASTJ89S", "ASTzkSQ", "ASTpmwm", "ASTv5nj", "ASTtw3m", "ASTRfWN", "ASTHDmc", "ASTJ041", "ASTonPE", "ASTJ70V", "ASTL7ZF", "ASTBI4q", "AST27BF", "ASTo2Rc", "ASTvRxK", "ASTrO40", "ASTMGwu", "ASTJi55", "ASTcAzJ", "ASTAGzU", "ASTsta3", "ASTa8Es", "ASTDKwI", "AST8hDP", "ASTz3WQ", "ASTG9zp", "ASTDCbn", "ASTvs6m", "ASTEGmn", "ASTRweS", "ASTGGvL", "ASTzCnb",
+                   "ASAIMbl", "ASAZG5f", "ASACkEE", "ASAYoNE", "ASAXXBf", "ASAiPm1", "ASArbtx", "ASAziCg", "ASAkEAw", "ASASVsh", "ASAw4F8", "ASAsjAG", "ASAIUKR", "ASAjaET", "ASAd5Kq", "ASAEQhE", "ASA7ffb", "ASA8NYK", "ASAIBFK", "ASAWH3Z", "ASAnYSl", "ASAwp6K", "ASAPdwh", "ASAbHeI", "ASAsUKl", "ASAqzUh", "ASAbcu0", "ASAidHD", "ASAjyU8", "ASAnNRw", "ASAZqyr", "ASAaBn0", "ASAWOoE", "ASAtTzy", "ASAU8PB", "ASAJ1h2", "ASAsx4d", "ASAdGiW", "ASAcGiU", "ASAOJKy", "ASARizQ", "ASAqjxd", "ASAOfBc", "ASABuIM", "ASAFjqN", "ASAOg3a", "ASAX2mt", "ASAIKfA", "ASAZslU", "ASAxXKc","developer"];
+    var FailKey = ["ASFDNR0", "ASFSwKA", "ASFe6zM", "ASFkNmU", "ASFE9h3", "ASF3QZK", "ASFxkQi", "ASFHSLK", "ASFm5Op", "ASFX6uA", "ASFQmX9", "ASFom9x", "ASFIHbg", "ASFvsZ4", "ASFRaQF", "ASFtKEF", "ASFA0J5", "ASFmkfW", "ASFB3Zi", "ASFYMd5", "ASFggGx", "ASFxMrT", "ASF2uaZ", "ASFIMiJ", "ASFPPip", "ASFBlaj", "ASFiMjL", "ASF4TqC", "ASFibja", "ASFMq6x", "ASFAK5k", "ASFNkU1", "ASFCzMn", "ASFR7eZ", "ASFS2MP", "ASFaQuA", "ASFl5Wf", "ASF60ZW", "ASFDLDR", "ASFPgWE", "ASFIZv0", "ASFDjTp", "ASFlOB5", "ASF2jTe", "ASFfyq1", "ASFCN7U", "ASF4Jx7", "ASFPeSe", "ASFq4ib", "ASFs7Wn"];
+    function validateKey() {
+        var PassKeySearch = PassKey.indexOf(UserEnteredKey.value);
+        var FailKeySearch = FailKey.indexOf(UserEnteredKey.value);
+        console.log(PassKeySearch)
+        if (UserEnteredKey.value == PassKey[PassKeySearch]) {
+            console.log("Validated key")
+            document.body.style.backgroundColor = 'green';
+            document.getElementById('message').innerHTML ="Your code is valid <a href='projectpg1.html'>Click here to continue</a>";
+        } else if(UserEnteredKey.value == FailKey[FailKeySearch]) {
+            console.log("valid key but Fail")
+            document.body.style.backgroundColor = 'darkorange';
+            document.getElementById('message').innerHTML ="You Failed in Assignment Try Again after you got good score";
+        } else {
+            console.log("Invalid key")
+            document.body.style.backgroundColor = 'red';
+            document.getElementById('message').innerHTML ="Your code is invalid ";
+        }
+    } 
+</script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intermediate</title>
+    <link rel="stylesheet" href="styleforpages.css">
+</head>
+<body>
+    <header>Python User Input & String Formatting</header>
+    <section><h2>User Input</h2><p>
+        Python allows for user input.
+        
+        That means we are able to ask the user for input.
+        
+        The method is a bit different in Python 3.6 than Python 2.7.
+        
+        Python 3.6 uses the input() method.
+        
+        Python 2.7 uses the raw_input() method.
+        
+        The following example asks for the username, and when you entered the username, it gets printed on the screen:
+        
+        Python 3.6
+        <pre>
+        username = input("Enter username:")
+        print("Username is: " + username)
+        </pre>Python 2.7<pre>
+        username = raw_input("Enter username:")
+        print("Username is: " + username)</pre>
+        To make sure a string will display as expected, we can format the result with the format() method.
+
+        <h2>String format()</h2>
+        The format() method allows you to format selected parts of a string.
+        
+        Sometimes there are parts of a text that you do not control, maybe they come from a database, or user input?
+        
+        To control such values, add placeholders (curly brackets {}) in the text, and run the values through the format() method:
+        
+        Example
+        Add a placeholder where you want to display the price:
+        <pre>
+        price = 49
+        txt = "The price is {} dollars"
+        print(txt.format(price))</pre>
+        You can add parameters inside the curly brackets to specify how to convert the value:
+        
+        Example
+        Format the price to be displayed as a number with two decimals:
+        <pre>
+        txt = "The price is {:.2f} dollars"</pre>
+        Check out all formatting types in our String format() Reference.
+        
+        <h2>Multiple Values</h2>
+        If you want to use more values, just add more values to the format() method:
+        <pre>
+        print(txt.format(price, itemno, count))</pre>
+        And add more placeholders:
+        
+        Example<pre>
+        quantity = 3
+        itemno = 567
+        price = 49
+        myorder = "I want {} pieces of item number {} for {:.2f} dollars."
+        print(myorder.format(quantity, itemno, price))</pre>
+        <h2>Index Numbers</h2>
+        You can use index numbers (a number inside the curly brackets {0}) to be sure the values are placed in the correct placeholders:
+        
+        Example<pre>
+        quantity = 3
+        itemno = 567
+        price = 49
+        myorder = "I want {0} pieces of item number {1} for {2:.2f} dollars."
+        print(myorder.format(quantity, itemno, price))</pre>
+        Also, if you want to refer to the same value more than once, use the index number:
+        
+        Example<pre>
+        age = 36
+        name = "John"
+        txt = "His name is {1}. {1} is {0} years old."
+        print(txt.format(age, name))</pre>
+        <h2>Named Indexes</h2>
+        You can also use named indexes by entering a name inside the curly brackets {carname}, but then you must use names when you pass the parameter values txt.format(carname = "Ford"):
+        
+        Example<pre>
+        myorder = "I have a {carname}, it is a {model}."
+        print(myorder.format(carname = "Ford", model = "Mustang"))</pre></p></section>
+    <footer><button id="previous" onclick="window.location.href='intermediatepg14.html'">Previous</button>
+        <button id="next" onclick="window.location.href='pythonintermediatequiz/pquiz.html'">Next</button></footer></footer>
+</body>
+</html>

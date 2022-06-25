@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleforpages.css">
+</head>
+<body>
+    <header>
+        PYTHON WHILE LOOPS
+    </header>
+    <section>
+        <p>
+            <h3>
+                Python Loops
+            </h3>
+            Python has two primitive loop commands:
+            *while loops ,
+            *for loops
+            <h3>
+                The while Loop
+            </h3>
+            With the while loop we can execute a set of statements as long as a condition is true.
+            <pre>
+                Example
+                Print i as long as i is less than 6:
+                i = 1
+                while i < 6:
+                print(i)
+                i += 1
+            </pre>
+            The while loop requires relevant variables to be ready, in this example we need to define an indexing variable, i, which we set to 1.
+            <h3>
+                The break Statement
+            </h3>
+            With the break statement we can stop the loop even if the while condition is true:
+            <pre>
+                Example
+                Exit the loop when i is 3:
+                i = 1
+                while i < 6:
+                 print(i)
+                if i == 3:
+                  break
+                i += 1
+            </pre>
+            <h3>
+                The continue Statement
+            </h3>
+            With the continue statement we can stop the current iteration, and continue with the next:
+            <pre>
+                Example
+                Continue to the next iteration if i is 3:
+                i = 0
+                while i < 6:
+                  i += 1
+                if i == 3:
+                   continue
+                print(i)
+            </pre>
+            <h3>
+                The else Statement
+            </h3>
+            With the else statement we can run a block of code once when the condition no longer is true:
+            <pre>
+                Example
+                Print a message once the condition is false:
+                i = 1
+                while i < 6:
+                print(i)
+                 i += 1
+                else:
+                print("i is no longer less than 6")
+            </pre>
+        </p>
+    </section>
+    <footer>
+        <button id="previous" onclick="window.location.href='basicpg12.html'">Previous</button>
+        <button id="next" onclick="window.location.href='basicpg14.html'">Next</button></footer>
+    </body>
+    </html>

@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleforpages.css">
+</head>
+<body>
+    <header>Java Packages</header>
+    <section><p>
+        <h2>Java Packages & API</h2>
+        A package in Java is used to group related classes. Think of it as a folder in a file directory. We use packages to avoid name conflicts, and to write a better maintainable code. Packages are divided into two categories:
+        
+        Built-in Packages (packages from the Java API)
+        User-defined Packages (create your own packages)
+        <h2>Built-in Packages</h2>
+        The Java API is a library of prewritten classes, that are free to use, included in the Java Development Environment.
+        
+        The library contains components for managing input, database programming, and much much more.<br> 
+        The complete list can be found at Oracles website: https://docs.oracle.com/javase/8/docs/api/.
+        <br>
+        The library is divided into packages and classes. 
+        Meaning you can either import a single class (along with its methods and attributes), or a whole package that contain all the classes that belong to the specified package.
+        
+        To use a class or a package from the library, you need to use the import keyword:
+        <br>
+        Syntax<pre>
+        import package.name.Class;   // Import a single class
+        import package.name.*;   // Import the whole package
+        Import a Class</pre>
+        If you find a class you want to use, for example, the Scanner class, which is used to get user input, write the following code:
+        <br>
+        Example<pre>
+        import java.util.Scanner;</pre>
+        In the example above, java.util is a package, while Scanner is a class of the java.util package.
+        
+        To use the Scanner class, create an object of the class and use any of the available methods found in the Scanner class documentation. In our example, we will use the nextLine() method, which is used to read a complete line:
+        <br>
+        Example
+        Using the Scanner class to get user input:
+        <pre>
+        import java.util.Scanner;
+        
+        class MyClass {
+          public static void main(String[] args) {
+            Scanner myObj = new Scanner(System.in);
+            System.out.println("Enter username");
+        
+            String userName = myObj.nextLine();
+            System.out.println("Username is: " + userName);
+          }
+        }
+        </pre>
+        <h2>Import a Package</h2>
+        There are many packages to choose from. In the previous example, we used the Scanner class from the java.util package. This package also contains date and time facilities, random-number generator and other utility classes.
+        
+        To import a whole package, end the sentence with an asterisk sign (*). The following example will import ALL the classes in the java.util package:
+        <br>
+        Example<pre>
+        import java.util.*;
+        </pre>
+        User-defined Packages
+        To create your own package, you need to understand that Java uses a file system directory to store them. Just like folders on your computer:
+        <br>
+        Example
+        <pre>
+        └── root
+          └── mypack
+            └── MyPackageClass.java
+        </pre>
+        To create a package, use the package keyword:
+        <pre></pre>
+        MyPackageClass.java
+        package mypack;
+        class MyPackageClass {
+          public static void main(String[] args) {
+            System.out.println("This is my package!");
+          } 
+        }</pre></p></section><footer>
+        <button id="previous" onclick="window.location.href='intermediatepg7.html'">Previous</button>
+        <button id="next" onclick="window.location.href='intermediatepg9.html'">Next</button></footer>
+</body>
+</html>

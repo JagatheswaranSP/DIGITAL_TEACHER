@@ -1,0 +1,195 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intermediate</title>
+    <link rel="stylesheet" href="styleforpages.css">
+</head>
+<body>
+    <header>
+        PYTHON FUNCTIONS
+    </header>
+    <section>
+        <p>
+            <h3>
+                Python Functions
+            </h3>
+            A function is a block of code which only runs when it is called.
+            You can pass data, known as parameters, into a function.
+            A function can return data as a result.
+            <h3>
+                Creating a Function
+            </h3>
+            In Python a function is defined using the def keyword:
+            <pre>
+                Example
+                 def my_function():
+                 print("Hello from a function")
+            </pre>
+            <h3>
+                Calling a Function
+            </h3>
+            To call a function, use the function name followed by parenthesis:
+            <pre>
+                Example
+                  def my_function():
+                  print("Hello from a function")
+                  my_function()
+            </pre>
+            <h3>
+                Arguments
+            </h3>
+            Information can be passed into functions as arguments.
+            Arguments are specified after the function name, inside the parentheses. You can add as many arguments as you want, just separate them with a comma.
+            The following example has a function with one argument (fname). When the function is called, we pass along a first name, which is used inside the function to print the full name:
+            <pre>
+                Example
+                def my_function(fname):
+                print(fname + " Refsnes")
+                my_function("Emil")
+                my_function("Tobias")
+                my_function("Linus")
+            </pre>
+            <h3>
+                Parameters or Arguments?
+            </h3>
+            The terms parameter and argument can be used for the same thing: information that are passed into a function.
+            <pre>
+                From a function's perspective:
+                A parameter is the variable listed inside the parentheses in the function definition.
+                An argument is the value that is sent to the function when it is called.
+            </pre>
+            <h3>
+                Number of Arguments
+            </h3>
+            By default, a function must be called with the correct number of arguments. Meaning that if your function expects 2 arguments, you have to call the function with 2 arguments, not more, and not less.
+            <pre>
+                Example
+                This function expects 2 arguments, and gets 2 arguments:
+                def my_function(fname, lname):
+                   print(fname + " " + lname)
+                my_function("Emil", "Refsnes")
+            </pre>
+            If you try to call the function with 1 or 3 arguments, you will get an error:
+            <pre>
+                Example
+                This function expects 2 arguments, but gets only 1:
+                def my_function(fname, lname):
+                  print(fname + " " + lname)
+                my_function("Emil")
+            </pre>
+            <h3>
+                Arbitrary Arguments, *args
+            </h3>
+            If you do not know how many arguments that will be passed into your function, add a * before the parameter name in the function definition.
+            This way the function will receive a tuple of arguments, and can access the items accordingly:
+            <pre>
+                Example
+                If the number of arguments is unknown, add a * before the parameter name:
+                def my_function(*kids):
+                  print("The youngest child is " + kids[2])
+                my_function("Emil", "Tobias", "Linus")
+            </pre>
+            <h3>
+                Keyword Arguments
+            </h3>
+            You can also send arguments with the key = value syntax.
+            This way the order of the arguments does not matter.
+            <pre>
+                Example
+                def my_function(child3, child2, child1):
+                  print("The youngest child is " + child3)
+                my_function(child1 = "Emil", child2 = "Tobias", child3 = "Linus")
+            </pre>
+            <h3>
+                Arbitrary Keyword Arguments, **kwargs
+            </h3>
+            If you do not know how many keyword arguments that will be passed into your function, add two asterisk: ** before the parameter name in the function definition.
+            This way the function will receive a dictionary of arguments, and can access the items accordingly:
+            <pre>
+                Example
+                If the number of keyword arguments is unknown, add a double ** before the parameter name:
+                def my_function(**kid):
+                  print("His last name is " + kid["lname"])
+                my_function(fname = "Tobias", lname = "Refsnes")
+            </pre>
+            <h3>
+                Default Parameter Value
+            </h3>
+            The following example shows how to use a default parameter value.
+            If we call the function without argument, it uses the default value:
+            <pre>
+                Example
+                def my_function(country = "Norway"):
+                  print("I am from " + country)
+
+                my_function("Sweden")
+                my_function("India")
+                my_function()
+                my_function("Brazil")
+            </pre>
+            <h3>
+                Passing a List as an Argument
+            </h3>
+            You can send any data types of argument to a function (string, number, list, dictionary etc.), and it will be treated as the same data type inside the function.
+            E.g. if you send a List as an argument, it will still be a List when it reaches the function:
+            <pre>
+                Example
+                def my_function(food):
+                  for x in food:
+                    print(x)
+                fruits = ["apple", "banana", "cherry"]
+                my_function(fruits)
+            </pre>
+            <h3>
+                Return Values
+            </h3>
+            To let a function return a value, use the return statement:
+            <pre>
+                Example
+                def my_function(x):
+                  return 5 * x
+                print(my_function(3))
+                print(my_function(5))
+                print(my_function(9))
+            </pre>
+            <h3>
+                The pass Statement
+            </h3>
+            function definitions cannot be empty, but if you for some reason have a function definition with no content, put in the pass statement to avoid getting an error.
+            <pre>
+                Example
+                def myfunction():
+                  pass
+            </pre>
+            <h3>
+                Recursion
+            </h3>
+            Python also accepts function recursion, which means a defined function can call itself.
+            Recursion is a common mathematical and programming concept. It means that a function calls itself. This has the benefit of meaning that you can loop through data to reach a result.
+            The developer should be very careful with recursion as it can be quite easy to slip into writing a function which never terminates, or one that uses excess amounts of memory or processor power. However, when written correctly recursion can be a very efficient and mathematically-elegant approach to programming.
+            In this example, tri_recursion() is a function that we have defined to call itself ("recurse"). We use the k variable as the data, which decrements (-1) every time we recurse. The recursion ends when the condition is not greater than 0 (i.e. when it is 0).
+            To a new developer it can take some time to work out how exactly this works, best way to find out is by testing and modifying it.
+            <pre>
+                Example
+                Recursion Example
+                def tri_recursion(k):
+                  if(k > 0):
+                   result = k + tri_recursion(k - 1)
+                  print(result)
+                 else:
+                   result = 0
+                 return result
+                print("\n\nRecursion Example Results")
+                tri_recursion(6)
+            </pre>
+        </p>
+    </section>
+    <footer>
+        <button id="previous" onclick="window.location.href='../../python.html'">Previous</button>
+        <button id="next" onclick="window.location.href='Intermediatepg2.html'">Next</button></footer>
+    </body>
+    </html>
+
+    

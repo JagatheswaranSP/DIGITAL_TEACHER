@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intermediate</title>
+    <link rel="stylesheet" href="styleforpages.css">
+</head>
+<body>
+    <header>Python JSON</header>
+    <section><h2>Python JSON</h2><p>JSON is a syntax for storing and exchanging data.
+
+        JSON is text, written with JavaScript object notation.
+        
+        JSON in Python
+        Python has a built-in package called json, which can be used to work with JSON data.
+        
+        Example
+        Import the json module:
+        <pre>
+        import json</pre>
+        Parse JSON - Convert from JSON to Python
+        If you have a JSON string, you can parse it by using the json.loads() method.
+        
+        The result will be a Python dictionary.
+        
+        Example
+        Convert from JSON to Python:
+        <pre>
+        import json
+        
+        # some JSON:
+        x =  '{ "name":"John", "age":30, "city":"New York"}'
+        
+        # parse x:
+        y = json.loads(x)
+        
+        # the result is a Python dictionary:
+        print(y["age"])</pre>
+        Convert from Python to JSON
+        If you have a Python object, you can convert it into a JSON string by using the json.dumps() method.
+        
+        Example
+        Convert from Python to JSON:
+        <pre>
+        import json
+        
+        # a Python object (dict):
+        x = {
+          "name": "John",
+          "age": 30,
+          "city": "New York"
+        }
+        
+        # convert into JSON:
+        y = json.dumps(x)
+        
+        # the result is a JSON string:
+        print(y)</pre>
+        You can convert Python objects of the following types, into JSON strings:
+        <br>
+        dict
+        list
+        tuple
+        string
+        int
+        float
+        True
+        False
+        None<br>
+        Example
+        Convert Python objects into JSON strings, and print the values:
+        <pre>
+        import json
+        
+        print(json.dumps({"name": "John", "age": 30}))
+        print(json.dumps(["apple", "bananas"]))
+        print(json.dumps(("apple", "bananas")))
+        print(json.dumps("hello"))
+        print(json.dumps(42))
+        print(json.dumps(31.76))
+        print(json.dumps(True))
+        print(json.dumps(False))
+        print(json.dumps(None))</pre>
+        <h2>Format the Result</h2>
+        The example above prints a JSON string, but it is not very easy to read, with no indentations and line breaks.
+        
+        The json.dumps() method has parameters to make it easier to read the result:
+        
+        Example
+        Use the indent parameter to define the numbers of indents:
+        <pre>
+        json.dumps(x, indent=4)</pre>
+        You can also define the separators, default value is (", ", ": "), which means using a comma and a space to separate each object, and a colon and a space to separate keys from values:
+        
+        Example
+        Use the separators parameter to change the default separator:
+        <pre>
+        json.dumps(x, indent=4, separators=(". ", " = "))</pre>
+        Order the Result
+        The json.dumps() method has parameters to order the keys in the result:
+        
+        Example
+        Use the sort_keys parameter to specify if the result should be sorted or not:
+        <pre>
+        json.dumps(x, indent=4, sort_keys=True)</pre></p></section>
+    <footer><button id="previous" onclick="window.location.href='intermediatepg10.html'">Previous</button>
+        <button id="next" onclick="window.location.href='intermediatepg12.html'">Next</button></footer></footer>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examination</title>
+    <link rel="stylesheet" href="validation.css">
+</head>
+<body>
+    <h1>VALIDATION PAGE</h1>
+    <div id="container">
+        <div>
+            <label><br><br>PLEASE ENTER THE VALID CODE HERE</label><br><br><br>
+            <input id="KeyInput" placeholder="Enter the code key here"> <br><br>
+            <button onclick="validateKey()">SUBMIT</button>
+        </div>
+    </div><br><br>
+<p id="message"></p>
+<script type="text/javascript">
+    var UserEnteredKey = document.getElementById('KeyInput'); 
+    var PassKey = ["PRTwQlC", "PRTKiiW", "PRTHV46", "PRTq3A6", "PRTB6A8", "PRTvWyy", "PRTnwzN", "PRTLW9O", "PRTJlWT", "PRTviBA", "PRToa3M", "PRTmQzc", "PRTKXTC", "PRTSFqh", "PRTdgQc", "PRT4oXY", "PRTLYcl", "PRT0j0E", "PRTZENs", "PRTDJlo", "PRTiThr", "PRT2xbi", "PRTZcbW", "PRTKpB6", "PRTPIMm", "PRTpqAI", "PRTnIaH", "PRTLQvz", "PRTgsH4", "PRTQDvK", "PRTpcMs", "PRT32Tv", "PRT8pWK", "PRTLF2V", "PRTH3q3", "PRTyMP0", "PRTE0wU", "PRT3TI1", "PRTpR4x", "PRT41jn", "PRT3rOX", "PRT2S5l", "PRTOX2O", "PRTsYtE", "PRTu5NA", "PRTZuZe", "PRTJYdA", "PRTUsvP", "PRTAyU5", "PRTUOYM",
+                    "PRAuCpS", "PRAyw9B", "PRAtf8p", "PRA3PDX", "PRAWB2e", "PRAC8e1", "PRAhZWk", "PRAXcGp", "PRAzW7r", "PRANpgi", "PRAdU8u", "PRAxcvL", "PRAKFcn", "PRAInmC", "PRAG2Iq", "PRAju51", "PRAzThG", "PRA2UGY", "PRA7hgL", "PRAwO9Z", "PRAy9ub", "PRAh2MO", "PRALWeJ", "PRAVbtu", "PRAzx7W", "PRAYKmX", "PRA0nEg", "PRAPhwf", "PRAeMWh", "PRAVAuq", "PRABJi4", "PRAGagk", "PRAW2eZ", "PRAF55d", "PRAEIIG", "PRAVjfn", "PRAcSQv", "PRAlLTC", "PRAWov3", "PRA9dvc", "PRA1rKa", "PRA2aao", "PRAJqgM", "PRAtVKB", "PRAVdE2", "PRAZ7Sl", "PRAqf24", "PRALtrR", "PRAGp4P", "PRAENVD","developer"];
+    var FailKey = ["PRF8Kot", "PRFakp0", "PRFugxU", "PRFfdtt", "PRFzmoC", "PRFz5Ux", "PRFC2WT", "PRFqRjG", "PRF11kG", "PRFGxty", "PRFmDfY", "PRF8xqc", "PRFEhbM", "PRFoFeH", "PRFkw2q", "PRFW6TX", "PRFLLQ2", "PRFJHeZ", "PRFSCOE", "PRFXMTU", "PRFWgWG", "PRF1Zej", "PRFgnhb", "PRF3300", "PRFlaZ3", "PRFH131", "PRFottJ", "PRFfmea", "PRFAamj", "PRFQ3uY", "PRFIULU", "PRFw0ft", "PRFTjUE", "PRFqJmw", "PRFdKs2", "PRFUyOE", "PRFFXcw", "PRFtqSs", "PRFfGop", "PRFiWRH", "PRF0KRh", "PRFNYGY", "PRFY2JC", "PRFg23T", "PRFJrK6", "PRF1w8z", "PRFsprW", "PRFzZHX", "PRFcCrj", "PRFyy24"];
+    function validateKey() {
+        var PassKeySearch = PassKey.indexOf(UserEnteredKey.value);
+        var FailKeySearch = FailKey.indexOf(UserEnteredKey.value);
+        console.log(PassKeySearch)
+        if (UserEnteredKey.value == PassKey[PassKeySearch]) {
+            console.log("Validated key")
+            document.body.style.backgroundColor = 'green';
+            document.getElementById('message').innerHTML ="Your code is valid <a href='jexam.html'>Click here to continue</a>";
+        } else if(UserEnteredKey.value == FailKey[FailKeySearch]) {
+            console.log("valid key but Fail")
+            document.body.style.backgroundColor = 'darkorange';
+            document.getElementById('message').innerHTML ="You Failed in Project Try Again after you got good score";
+        } else {
+            console.log("Invalid key")
+            document.body.style.backgroundColor = 'red';
+            document.getElementById('message').innerHTML ="Your code is invalid ";
+        }
+    } 
+</script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleforpages.css">
+</head>
+<body>
+    <header>
+        PYTHON DICTIONARIES
+    </header>
+    <section>
+        <p>
+            <h3>
+                Python Dictionaries
+            </h3>
+            <pre>
+                thisdict = {
+                    "brand": "Ford",
+                    "model": "Mustang",
+                    "year": 1964
+                  }
+            </pre>
+            <h3>
+                Dictionary
+            </h3>
+            Dictionaries are used to store data values in key:value pairs.
+            A dictionary is a collection which is ordered*, changeable and do not allow duplicates.
+            Dictionaries are written with curly brackets, and have keys and values:
+            <pre>
+                Example
+                Create and print a dictionary:
+                thisdict = {
+                    "brand": "Ford",
+                    "model": "Mustang",
+                    "year": 1964
+                  }
+                print(thisdict)
+            </pre>
+            <h3>
+                Dictionary Items
+            </h3>
+            Dictionary items are ordered, changeable, and does not allow duplicates.
+            Dictionary items are presented in key:value pairs, and can be referred to by using the key name.
+            <pre>
+                Example
+                Print the "brand" value of the dictionary:
+                thisdict = {
+                    "brand": "Ford",
+                    "model": "Mustang",
+                    "year": 1964
+                  }
+                 print(thisdict["brand"])
+            </pre>
+            <h3>
+                Ordered or Unordered?
+            </h3>
+            When we say that dictionaries are ordered, it means that the items have a defined order, and that order will not change.
+            Unordered means that the items does not have a defined order, you cannot refer to an item by using an index.
+            <h3>
+                Changeable
+            </h3>
+            Dictionaries are changeable, meaning that we can change, add or remove items after the dictionary has been created.
+            <h3>
+                Duplicates Not Allowed
+            </h3>
+            Dictionaries cannot have two items with the same key:
+            <pre>
+                Example
+                Duplicate values will overwrite existing values:
+                thisdict = {
+                    "brand": "Ford",
+                    "model": "Mustang",
+                    "year": 1964,
+                    "year": 2020
+                }
+                print(thisdict)
+            </pre>
+            <h3>
+                Dictionary Length
+            </h3>
+            To determine how many items a dictionary has, use the len() function:
+            <pre>
+                Example
+                Print the number of items in the dictionary:
+                print(len(thisdict))
+            </pre>
+            <h3>
+                Dictionary Items - Data Types
+            </h3>
+            The values in dictionary items can be of any data type:
+            <pre>
+                Example
+                String, int, boolean, and list data types:
+                thisdict = {
+                    "brand": "Ford",
+                    "electric": False,
+                    "year": 1964,
+                    "colors": ["red", "white", "blue"]
+                }
+            </pre>
+            <h3>
+                type()
+            </h3>
+            From Python's perspective, dictionaries are defined as objects with the data type 'dict':
+            <pre>
+                Example
+                Print the data type of a dictionary:
+                thisdict = {
+                    "brand": "Ford",
+                    "model": "Mustang",
+                    "year": 1964
+                }
+                print(type(thisdict))
+            </pre>
+            <h3>
+                Python Collections (Arrays)
+            </h3>
+            There are four collection data types in the Python programming language:
+
+            *List is a collection which is ordered and changeable. Allows duplicate members.
+            *Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
+            *Set is a collection which is unordered, unchangeable*, and unindexed. No duplicate members.
+            *Dictionary is a collection which is ordered** and changeable. No duplicate members.
+        </p>
+    </section>
+    <footer>
+        <button id="previous" onclick="window.location.href='basicpg10.html'">Previous</button>
+        <button id="next" onclick="window.location.href='basicpg12.html'">Next</button></footer>
+    </body>
+    </html>

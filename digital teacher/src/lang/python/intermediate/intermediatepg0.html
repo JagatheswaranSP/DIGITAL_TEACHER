@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="validation.css">
+</head>
+<body>
+    <h1>VALIDATION PAGE</h1>
+    <div id="container">
+        <div>
+            <label><br><br>PLEASE ENTER THE VALID CODE HERE</label><br><br><br>
+            <input id="KeyInput" placeholder="Enter the code key here"> <br><br>
+            <button onclick="validateKey()">SUBMIT</button>
+        </div>
+    </div><br><br>
+<p id="message"></p>
+<script type="text/javascript">
+    var UserEnteredKey = document.getElementById('KeyInput'); 
+    var PassKey = ["BATxwzn", "BAT8Ip6", "BATORSr", "BATheHl", "BATm9PK", "BATGP0e", "BATpXJl", "BAT05XD", "BATuz9w", "BATZZqF", "BAT3bTG", "BATviPE", "BAT3DHk", "BATBAfG", "BATz225", "BAT4UjH", "BAT69T1", "BATV0UG", "BATPieC", "BATp61z", "BATNKpl", "BATIcvo", "BATnOW9", "BATskrx", "BAT5dV5", "BATJTDD", "BATnWgs", "BATTCGn", "BATbxQf", "BATqwfF", "BATOenC", "BATvnb2", "BAT5N4k", "BAT8TiX", "BAT74IF", "BATYERd", "BATLjSl", "BATJEP0", "BATJItw", "BATlW0p", "BATjJ2r", "BATwh2I", "BATBtQb", "BATTGwf", "BATCf7Y", "BATUZoF", "BATGXUb", "BATIyKI", "BATh2sq", "BATCNO3",
+                    "BAAqhiG", "BAAoMfV", "BAA0mr0", "BAAXFwD", "BAAOn1F", "BAADMNB", "BAA4ZtE", "BAAuTRS", "BAAp2OX", "BAA4E3K", "BAA78zP", "BAA973e", "BAAOIlc", "BAAQ8cY", "BAAqJnd", "BAAbkRu", "BAAmxr5", "BAAm4Hz", "BAAamGC", "BAAE5zY", "BAA1kxV", "BAAwkZy", "BAAvGSN", "BAAfLvK", "BAA2VEg", "BAAiY86", "BAA2twi", "BAAr2FQ", "BAA0kN1", "BAAoSbu", "BAAMpOp", "BAA6rzt", "BAAdfyQ", "BAAgnvF", "BAADURw", "BAAZcTb", "BAA6Kkw", "BAAIuJ0", "BAABSYU", "BAATFWj", "BAAkotG", "BAANSWC", "BAAtX4e", "BAAlJdZ", "BAAXbvK", "BAAWLJ3", "BAA2OZa", "BAA4tAJ", "BAAKMvY", "BAAaMSc","developer"];
+    var FailKey = ["BAFJIBw", "BAFzlMK", "BAF34Rk", "BAFeHfu", "BAFthHa", "BAFCy22", "BAFmEpu", "BAFwIXU", "BAFX6Fg", "BAFFRU7", "BAFJWXa", "BAFHPo5", "BAFhpLV", "BAF3YZb", "BAFk3Ci", "BAFOuAD", "BAFwbR6", "BAFQv6z", "BAF1hkC", "BAFkKAx", "BAF7EJ7", "BAFQYid", "BAFfFEq", "BAFjb8N", "BAF5Bqu", "BAFg65d", "BAF6Sg8", "BAFMLho", "BAFcyG5", "BAFu3nu", "BAF5AIJ", "BAFYMhu", "BAF9Oiu", "BAFJW3x", "BAFhdtB", "BAFBSjT", "BAFECOr", "BAFQ4yq", "BAF41Vc", "BAFEgXU", "BAFzcy4", "BAFzQb0", "BAFi3ED", "BAFMx22", "BAFZlMn", "BAFsONa", "BAFoNCH", "BAFAqvA", "BAFXvii", "BAFf7fO"]
+    function validateKey() {
+        var PassKeySearch = PassKey.indexOf(UserEnteredKey.value);
+        var FailKeySearch = FailKey.indexOf(UserEnteredKey.value);
+        console.log(PassKeySearch)
+        if (UserEnteredKey.value == PassKey[PassKeySearch]) {
+            console.log("Validated key")
+            document.body.style.backgroundColor = 'green';
+            document.getElementById('message').innerHTML ="Your code is valid <a href='intermediatepg1.html'>Click here to continue</a>";
+        } else if(UserEnteredKey.value == FailKey[FailKeySearch]) {
+            console.log("valid key but Fail")
+            document.body.style.backgroundColor = 'darkorange';
+            document.getElementById('message').innerHTML ="You Failed in Basic Quiz Try Again after you got good score";
+        } else {
+            console.log("Invalid key")
+            document.body.style.backgroundColor = 'red';
+            document.getElementById('message').innerHTML ="Your code is invalid ";
+        }
+    } 
+</script>
+</body>
+</html>

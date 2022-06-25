@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <link rel="stylesheet" href="styleforpages.css">
+</head>
+<body>
+    <header>Assignment</header>
+
+    <section><p><h2>Circular Linked List</h2>
+        The circular linked list is a kind of linked list. First thing first, the node is an element of the list, and it has two parts that are, data and next. Data represents the data stored in the node and next is the pointer that will point to next node. Head will point to the first element of the list, and tail will point to the last element in the list. In the simple linked list, all the nodes will point to their next element and tail will point to null.
+        The circular linked list is the collection of nodes in which tail node also point back to head node. The diagram shown below depicts a circular linked list. Node A represents head and node D represents tail. So, in this list, A is pointing to B, B is pointing to C and C is pointing to D but what makes it circular is that node D is pointing back to node A.<br>
+        <img src="img/circularlinkedlist.png"><br>
+        <h2>Algorithm</h2>
+        <pre>
+            Define a Node class which represents a node in the list. 
+            It has two properties data and next which will point to the next node.
+            Define another class for creating the circular linked list and it has two nodes: 
+            head and tail. It has two methods: add() and display() .
+            add() will add the node to the list:
+                It first checks whether the head is null, then it will insert the node as the head.
+                Both head and tail will point to the newly added node.
+                If the head is not null, the new node will be the new tail, 
+                and the new tail will point to the head as it is a circular linked list.
+            a. display() will show all the nodes present in the list.
+
+                Define a new node 'current' that will point to the head.
+                Print current.data till current will points to head
+                Current will point to the next node in the list in each iteration.
+        </pre>
+    
+    
+    
+    <p id="question">Write a simple java program to create and display a Circular Linked List</p>
+    <p id="output">Expected output:<br>
+        Nodes of the circular linked list:<br>
+        1 2 3 4</p>
+    
+    </section>
+
+    <footer><button id="previous" onclick="window.location.href='assignmentpg8.html'">Previous</button>
+            <button id="next" onclick="window.location.href='assignmentpg10.html'">Next</button></footer>
+</body>
+</html>

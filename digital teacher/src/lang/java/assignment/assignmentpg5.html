@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <link rel="stylesheet" href="styleforpages.css">
+</head>
+<body>
+    <header>Assignment</header>
+
+    <section><h2>Java Program to determine whether a given string is palindrome</h2>
+        <p>
+            In this program, we need to check whether a given string is palindrome or not.
+            A string is said to be palindrome if it is the same from both the ends. 
+            For e.g. Kayak string is a palindrome because if we try to read it from backward, 
+            it is same as forward. 
+            One of the approach to check this is iterate through the string till middle of string and compare a character from back and forth.
+            <h2>ALGORITHM</h2>
+            <pre>                STEP 1: START
+                STEP 2: DEFINE String string = "Kayak"
+                STEP 3: SET flag = true
+                STEP 4: CONVERT string into lowercase.
+                STEP 5: SET i =0. REPEAT STEP 6 to STEP 7 UNTIL i
+                STEP 6: IF (string.charAt(i) != string.charAt(string.length()-i-1))
+                              then
+                              SET flag = false
+                              break
+                STEP 7: SET i = i + 1
+                STEP 8: IF flag
+                              then PRINT "Yes"
+                              else
+                              PRINT "No"
+                STEP 9: END</pre>
+                <p id="question">
+                    Write a Java Program to determine whether a given string is palindrome or not
+                </p>
+                <p id="output">
+                    Expected Output:<br>
+                    Give string is palindrome 
+                </p></section>
+
+    <footer><button id="previous" onclick="window.location.href='assignmentpg4.html'">Previous</button>
+            <button id="next" onclick="window.location.href='assignmentpg6.html'">Next</button></footer>
+</body>
+</html>

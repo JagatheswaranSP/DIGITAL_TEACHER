@@ -1,0 +1,134 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic</title>
+    <link rel="stylesheet" href="styleforpages.css">
+</head>
+<body>
+    <header>Java If ... Else
+    </header>
+    <section><p>
+        <h2>Java Conditions and If Statements</h2>
+Java supports the usual logical conditions from mathematics:
+
+Less than: a < b <br>
+Less than or equal to: a <= b<br>
+Greater than: a > b<br>
+Greater than or equal to: a >= b<br>
+Equal to a == b<br>
+Not Equal to: a != b<br>
+You can use these conditions to perform different actions for different decisions.
+<br>
+Java has the following conditional statements:
+<br>
+Use if to specify a block of code to be executed, if a specified condition is true<br>
+Use else to specify a block of code to be executed, if the same condition is false<br>
+Use else if to specify a new condition to test, if the first condition is false<br>
+Use switch to specify many alternative blocks of code to be executed<br>
+<h2>The if Statement</h2>
+Use the if statement to specify a block of Java code to be executed if a condition is true.
+<br>
+Syntax<pre>
+if (condition) {
+  // block of code to be executed if the condition is true
+}</pre>
+Note that if is in lowercase letters. Uppercase letters (If or IF) will generate an error.
+<br>
+In the example below, we test two values to find out if 20 is greater than 18. If the condition is true, print some text:
+<br>
+Example<pre>
+if (20 > 18) {
+  System.out.println("20 is greater than 18");
+}
+</pre>
+We can also test variables:
+<br>
+Example<pre>
+int x = 20;
+int y = 18;
+if (x > y) {
+  System.out.println("x is greater than y");
+}
+</pre>
+Example explained
+In the example above we use two variables, x and y, to test whether x is greater than y (using the > operator). As x is 20, and y is 18, and we know that 20 is greater than 18, we print to the screen that "x is greater than y".
+<br>
+The else Statement
+Use the else statement to specify a block of code to be executed if the condition is false.
+<br>
+Syntax<pre>
+if (condition) {
+  // block of code to be executed if the condition is true
+} else {
+  // block of code to be executed if the condition is false
+}</pre><br>
+Example<pre>
+int time = 20;
+if (time < 18) {
+  System.out.println("Good day.");
+} else {
+  System.out.println("Good evening.");
+}
+// Outputs "Good evening."
+</pre>
+
+Example explained<br>
+In the example above, time (20) is greater than 18, so the condition is false. Because of this, we move on to the else condition and print to the screen "Good evening". If the time was less than 18, the program would print "Good day".
+<br>
+The else if Statement
+Use the else if statement to specify a new condition if the first condition is false.
+<br>
+Syntax<pre>
+if (condition1) {
+  // block of code to be executed if condition1 is true
+} else if (condition2) {
+  // block of code to be executed if the condition1 is false and condition2 is true
+} else {
+  // block of code to be executed if the condition1 is false and condition2 is false
+}</pre>
+Example<pre>
+int time = 22;
+if (time < 10) {
+  System.out.println("Good morning.");
+} else if (time < 20) {
+  System.out.println("Good day.");
+} else {
+  System.out.println("Good evening.");
+}
+// Outputs "Good evening."
+</pre>
+In the example above, time (22) is greater than 10, so the first condition is false. The next condition, in the else if statement, is also false, so we move on to the else condition since condition1 and condition2 is both false - and print to the screen "Good evening".
+<br>
+However, if the time was 14, our program would print "Good day."</p>
+<h2>Short Hand If...Else</h2>
+<p>
+There is also a short-hand if else, which is known as the ternary operator because it consists of three operands.
+
+It can be used to replace multiple lines of code with a single line, and is most often used to replace simple if else statements:
+
+Syntax
+<pre>variable = (condition) ? expressionTrue :  expressionFalse;</pre>
+Instead of writing:
+
+Example<pre>
+int time = 20;
+if (time < 18) {
+  System.out.println("Good day.");
+} else {
+  System.out.println("Good evening.");
+}
+</pre>
+You can simply write:
+
+Example<pre>
+int time = 20;
+String result = (time < 18) ? "Good day." : "Good evening.";
+System.out.println(result);</pre>
+</p>
+    </section><footer>
+    <button id="previous" onclick="window.location.href='basicpg10.html'">Previous</button>
+    <button id="next" onclick="window.location.href='basicpg12.html'">Next</button></footer>
+</body>
+</html>

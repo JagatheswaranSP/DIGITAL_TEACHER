@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript function to get a random item from an array.</title>
+</head>
+<body>
+  <p id="result"></p>
+    <script type="text/javascript">
+function getRandomItem(arr) {
+
+const randomIndex = Math.floor(Math.random() * arr.length);
+
+const item = arr[randomIndex];
+
+return item;
+}
+
+const array = [1, 'hellombry', 5, 8];
+
+const result = getRandomItem(array);
+console.log(result);
+document.getElementById("result").innerHTML = result;
+    </script>
+</body>
+</html>

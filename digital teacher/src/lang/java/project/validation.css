@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    font-family: Trebuchet MS;
+}
+h1{
+    text-align: center;
+    color: #00005b;
+    padding: 40px;
+    font-size:70px;
+}
+label{
+    color: #fff;
+}
+input{
+    background-color: #fff;
+    border: 3px dashed darkblue;
+    text-align: center;
+}
+p{
+font-size:2rem;
+text-align: center;
+}
+#container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+#container>div {
+    text-align: center;
+    font-size: 2rem;
+    
+}
+
+#container>div>input {
+
+    font-size: 1.5rem;
+}
+
+#container>div>button {
+    background-color: #27c82f;
+
+    border: none;
+
+    padding: 15px 32px;
+
+
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 20px 2px;
+    cursor: pointer;
+
+    transition-duration: 0.4s;
+}
+
+#container>div>button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+body {
+    background-color: #007bff;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+#message{
+    font-size:25px;
+}
